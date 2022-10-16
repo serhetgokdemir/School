@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+	float firstside,secondside,result;
+	printf("Welcome to 'Four-Sided Shape Area' Calculator\n");
+	
+	printf("Please enter the length of first side: ");
+	scanf("%f",&firstside);
+	
+	printf("Please enter the length of second side ");
+	scanf("%f",&secondside);
+	
+	result = firstside*secondside;
+	
+	if (firstside == secondside)
+	{
+		printf("Oh, I see that It's a square. I'm calculating, please wait.\n");
+		printf("Your result is:  %f",result);
+	}
+	else
+	{
+		printf("Oh, I see that It's a rectangle. I'm calculating, please wait.\n");
+		printf("Your result is: %f",result);
+	}
+	return 0;
