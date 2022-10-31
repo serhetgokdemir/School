@@ -1,0 +1,52 @@
+//Write a C program to find all roots of a quadratic equation.
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main ()
+{
+	printf("The quadratic equation is: ax^2 + bx + c\n");	
+	float a,b,c;
+	float disc;
+	float root1,root2;
+	float rootdisc;
+	float iroot1;
+	float iroot2;
+	
+	printf("Please enter the value of a integer: ");
+	scanf("%f",&a);
+	
+	printf("Please enter the value of b integer: ");
+	scanf("%f",&b);
+	
+	printf("Please enter the value of c integer: ");
+	scanf("%f",&c);
+	
+	disc = (b*b)-(4*a*c);
+	
+	if (disc>0)
+	{
+		rootdisc= sqrt(disc);
+		root1= (-b+(rootdisc))/(2*a);
+		root2= (-b-(rootdisc))/(2*a);
+		printf("The roots are (%.2f,%.2f)",root1,root2);
+	}
+	if (disc==0)
+	{
+		root1 = (-b/2*a);
+		printf("The equation has only one root and the root is: %.2f",root1);
+	}
+	if (disc<0)
+	{
+		rootdisc = sqrt(-disc);
+		iroot1 = -b/(2*a);
+		iroot2 = rootdisc/(2*a);
+		
+		printf("Root1 is %.2f+i*%.2f\n",iroot1,iroot2);
+		printf("Root2 is %.2f-i*%.2f\n",iroot1,iroot2);
+		
+	}
+
+return 0;
+}
