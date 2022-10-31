@@ -18,12 +18,12 @@ int main ()
 	{
 		printf("Your triangle is valid.");
 	}
+	else if (side1 <=0 || side2<=0 || side3<=0)
+	{
+		printf("Length of the sides can not be a negative number");
+	}
 	else
 	{
 		printf("Your triangle is NOT valid");
-	}
-	if (side1 <=0 || side2<=0 || side3<=0)
-	{
-		printf("Length of the sides can not be a negative number");
 	}
 }
